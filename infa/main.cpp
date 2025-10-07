@@ -226,3 +226,95 @@ int main() {
     }
     
 }*/
+
+//Задача 5.4
+/*#include <iostream>  
+#include <iomanip>  
+#include <cstdlib>  
+#include <ctime>  
+using namespace std;  
+int main() {  
+    srand(time(0));  
+    int N, M;
+    cout << "Введите количество строк (N): ";  
+    cin >> N;  
+    cout << "Введите количество столбцов (M): ";  
+    cin >> M;  
+    int** array = new int*[N];  
+    for(int i = 0; i < N; i++) {  
+        array[i] = new int[M];  
+    }
+    cout << "\nСгенерированный массив:\n";  
+    for(int i = 0; i < N; i++) {  
+        for(int j = 0; j < M; j++) {  
+            array[i][j] = rand() % 100;  
+            cout << setw(4) << array[i][j];  
+        }  
+        cout << endl;  
+    }  
+}*/ 
+
+
+//Задача 5.5
+/*#include <iostream>  
+#include <iomanip>  
+#include <cstdlib>  
+#include <ctime>  
+using namespace std;  
+int main() {  
+    srand(time(0));  
+    int N, M;
+    cout << "Введите количество строк (N): ";  
+    cin >> N;  
+    cout << "Введите количество столбцов (M): ";  
+    cin >> M;  
+    int** array = new int*[N];  
+    for(int i = 0; i < N; i++) {  
+        array[i] = new int[M];  
+    }
+    cout << "\nСгенерированный массив:\n";  
+    for(int i = 0; i < N; i++) {  
+        for(int j = 0; j < M; j++) {  
+            array[i][j] = rand() % 100;  
+            cout << setw(4) << array[i][j];  
+        }  
+        cout << endl;  
+    }
+    int sum = 0;
+    for(int i = 0; i < N; i++) {  
+        for(int j = 0; j < M; j++) {  
+            sum += array[i][j];
+        }  
+    }  
+    cout << "\nСумма всех элементов массива: " << sum << endl;
+}*/
+
+
+//Задача 5.6
+/*#include <iostream>
+#include <iomanip>
+#include <ctime>
+using namespace std;
+int main() {
+    int n;
+    cout << "Введите размер матрицы (n): ";
+    cin >> n;
+    int** matrix = new int*[n];
+    for(int i = 0; i < n; i++) {
+        matrix[i] = new int[n];
+    }
+    srand(time(0));
+    cout << "\nСгенерированная матрица:\n";
+    for(int i = 0; i < n; i++) {
+        for(int j = 0; j < n; j++) {
+            matrix[i][j] = rand() % 100; // Случайные числа от 0 до 99
+            cout << setw(4) << matrix[i][j]; // Выравнивание вывода
+        }
+        cout << endl;
+    }
+    int diagonalSum = 0;
+    for(int i = 0; i < n; i++) {
+        diagonalSum += matrix[i][i]; // Элементы главной диагонали имеют одинаковые индексы
+    }
+    cout << "\nСумма элементов главной диагонали: " << diagonalSum << endl;
+}*/
