@@ -307,14 +307,14 @@ int main() {
     cout << "\nСгенерированная матрица:\n";
     for(int i = 0; i < n; i++) {
         for(int j = 0; j < n; j++) {
-            matrix[i][j] = rand() % 100; // Случайные числа от 0 до 99
-            cout << setw(4) << matrix[i][j]; // Выравнивание вывода
+            matrix[i][j] = rand() % 100;
+            cout << setw(4) << matrix[i][j]; 
         }
         cout << endl;
     }
     int diagonalSum = 0;
     for(int i = 0; i < n; i++) {
-        diagonalSum += matrix[i][i]; // Элементы главной диагонали имеют одинаковые индексы
+        diagonalSum += matrix[i][i];
     }
     cout << "\nСумма элементов главной диагонали: " << diagonalSum << endl;
 }*/
